@@ -24,6 +24,7 @@ const Nav = () => {
     return (
       
   <nav className="
+  z-10
   sticky  
   top-0
   py-8
