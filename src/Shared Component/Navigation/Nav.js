@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import img from '../../Component/photo/Mobilehub_Logo.png';
+import img from '../../Component/photo/logo/Mobilehub_Logo.png';
 
 const Nav = () => {
   const activestyle=({ isActive }) => {
