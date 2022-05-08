@@ -1,12 +1,12 @@
 # Project Name : MobileHub.
 
-Web sit Link :  [https://active-dental-care-e433d.web.app/](https://active-dental-care-e433d.web.app/).
+Web sit Link :  [https://mobilehub-17531.web.app/](https://mobilehub-17531.web.app/).
 # Feature List :
-* This is a Dental Doctor Website.
-* Your can buy you degaire pakage to you need.
-* You will meet your teeth doctor.
-* You will singup this website .
-* you will sing up easy way like    facebook,google etc.
+* This is a Mobile warehouse management Website.
+* Your can buy you choose mobilephone to you need.
+* You can added new product on your product list.
+* You will delete your desire product.
+* you will sing up easy way like google , email & password etc.
   
 
 # Technology list : 
