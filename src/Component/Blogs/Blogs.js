@@ -67,6 +67,10 @@ const Blogs = () => {
             </div>
             
         </div>
+        <div  className='md:w-2/4 drop-shadow-lg border p-5 rounded'>
+                <h1 className='text-3xl font-bold mb-10'>Q :Stackoverflow  Question link?</h1>
+                <a href="https://stackoverflow.com/questions/72160750/hello-there-i-hope-you-all-are-good-firebase-hoos-is-good-or-bed">https://stackoverflow.com/questions/72160750/hello-there-i-hope-you-all-are-good-firebase-hoos-is-good-or-bed</a>
+            </div>
        
       </div>
     );

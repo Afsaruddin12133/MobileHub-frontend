@@ -1,9 +1,10 @@
 import React from 'react';
+import Carousel from './Carousel/Carousel';
 
 const Home = () => {
     return (
-        <div style={{height:"100vh"}}>
-            <h1>From Home</h1>
+        <div >
+           <Carousel/>
         </div>
     );
 };

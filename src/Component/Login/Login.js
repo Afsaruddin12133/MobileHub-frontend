@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../Firebase init/Firebase.init';
 import Social from '../../Shared Component/Social/Social';
 
 const Login = () => {
  let navigate = useNavigate();
+
+ const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+ 
+ const handelresetpassword = async () =>{
+   let email =  document.getElementById('exampleInputEmail2').value;
+   if(email === ""){
+     toast("Please enter you email to email fild Befor reset!!")
+   }else{
+    await sendPasswordResetEmail(email);
+    toast("Send Email for reset password!!")
+   }
+ 
+}
 
   const [email,setEmail] = useState()
   const [password,setPassword] = useState()
@@ -67,7 +80,7 @@ const Login = () => {
                 id="exampleCheck2" />
               <label className="form-check-label inline-block text-gray-800" for="exampleCheck2">Remember me</label>
             </div>
-            <button type='button' 
+            <button type='button'  onClick={handelresetpassword}
               className="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out">Forgot
               password?</button>
           </div>
