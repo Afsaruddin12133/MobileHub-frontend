@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import About from './Component/About/About';
 import AddItems from './Component/Add Items/AddItems';
@@ -11,7 +12,6 @@ import NotFound from './Component/NotFound/NotFound';
 import Registration from './Component/Registation/Registration';
 import Footer from './Shared Component/Footer/Footer';
 import Nav from './Shared Component/Navigation/Nav';
-
 function App() {
   return (
     <div className="App">

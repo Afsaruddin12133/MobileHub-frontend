@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import auth from '../../Firebase init/Firebase.init';
 import Social from '../../Shared Component/Social/Social';
 
 const Login = () => {
-    let navigate = useNavigate();
+ let navigate = useNavigate();
+
+  const [email,setEmail] = useState()
+  const [password,setPassword] = useState()
+  const [signInWithEmailAndPassword,user,loading,error,] = useSignInWithEmailAndPassword(auth);
+
+  const handelsingin = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(email, password)
+   console.log(error)
+    document.getElementById('exampleInputEmail2').value = "";
+    document.getElementById('exampleInputPassword2').value = "";
+    }
+  
     return (
         <div className="block rounded-lg shadow-lg bg-white max-w-sm p-10 mt-10 mb-12 m-auto ">
             <h1 className='text-center text-3xl font-semibold mb-6'>Log In</h1>  
         <form>
           <div className="form-group mb-6">
-            <input type="email" className="form-control
+            <input type="email" onBlur={(e)=>setEmail(e.target.value)} className="form-control
               block
               w-full
               px-3
@@ -26,8 +42,9 @@ const Login = () => {
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputEmail2"
               aria-describedby="emailHelp" placeholder="Enter email"  required/>
           </div>
+          <ToastContainer />
           <div className="form-group mb-6">
-            <input type="password"   className="form-control block
+            <input type="password" onBlur={(e)=>setPassword(e.target.value)}   className="form-control block
               w-full
               px-3
               py-1.5
@@ -72,7 +89,7 @@ const Login = () => {
             active:bg-blue-800 active:shadow-lg
             transition
             duration-150
-            ease-in-out">Log in</button>
+            ease-in-out" onClick={handelsingin}>Log in</button>
           <p className="text-gray-800 mt-6 text-center">Not a member?
            <button  onClick={()=>navigate("/registration")}
               className="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out">Register</button>

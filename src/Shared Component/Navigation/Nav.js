@@ -1,8 +1,18 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import img from '../../Component/photo/logo/Mobilehub_Logo.png';
+import auth from '../../Firebase init/Firebase.init';
 
 const Nav = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const logout = () => {
+      signOut(auth);
+      toast("Logout Succefull")
+    };
   const activestyle=({ isActive }) => {
     return {
       margin:"10px",
@@ -12,12 +22,13 @@ const Nav = () => {
       color: isActive ? "#6FDFDF" : "white",
     };
   };
+  
   const navinfo = [
       {id:1,name:"Home",link:"/"},
       {id:2,name:"Manage Items",link:"/manageItem"},
       {id:3,name:"Add Items",link:"/addItems"},
       {id:4,name:"My Items",link:"/myItems"},
-      {id:5,name:"Log In",link:"/login"},
+      {id:5,name:user?<button type="button" className=" text-white " onClick={logout} >Logout</button>:'Login',link:"/login"},
       {id:6,name:"Q&A",link:"/blogs"},
       {id:7,name:"About Us",link:"/about"},
   ]
@@ -70,6 +81,7 @@ const Nav = () => {
             {
                 navinfo.map(info =>  <NavLink key={info.id}  to = {info.link} style={activestyle}>{info.name}</NavLink>)
             }
+          
   </ul>
   </div>
   </div>
