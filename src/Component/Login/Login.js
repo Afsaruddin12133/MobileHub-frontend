@@ -28,7 +28,10 @@ const Login = () => {
   const handelsingin = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password)
-   console.log(error)
+  
+    if(error.name == 'Firebase'){
+      toast('Login faild ! Please try again!')
+    }
     document.getElementById('exampleInputEmail2').value = "";
     document.getElementById('exampleInputPassword2').value = "";
     }
