@@ -27,10 +27,9 @@ const Nav = () => {
       {id:1,name:"Home",link:"/"},
       {id:2,name:"Manage Items",link:"/manageItem"},
       {id:3,name:"Add Items",link:"/addItems"},
-      {id:4,name:"My Items",link:"/myItems"},
-      {id:5,name:user?<button type="button" className=" text-white " onClick={logout} >Logout</button>:'Login',link:"/login"},
-      {id:6,name:"Q&A",link:"/blogs"},
-      {id:7,name:"About Us",link:"/about"},
+      {id:4,name:user?<button type="button" className=" text-white " onClick={logout} >Logout</button>:'Login',link:"/login"},
+      {id:5,name:"Q&A",link:"/blogs"},
+      {id:6,name:"About Us",link:"/about"},
   ]
     return (
       
