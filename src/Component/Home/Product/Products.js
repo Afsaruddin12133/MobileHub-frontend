@@ -9,7 +9,6 @@ const Products = () => {
         .then(product =>setProducts(product))
     },[])
     return (
-      
                <div className='grid grid-cols-1 md:grid-cols-3 m-4 gap-4 '>
             {
               (products)?products.map(product => <Product key={product._id} product={product}/>):''
