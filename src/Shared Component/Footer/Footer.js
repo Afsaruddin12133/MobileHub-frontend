@@ -10,16 +10,16 @@ const Footer = () => {
           Products
         </h6>
         <p className="mb-4">
-          <a href="#!" className="text-white">Angular</a>
+          <a href="#!" className="text-white">Apple</a>
         </p>
         <p className="mb-4">
-          <a href="#!" class="text-white">React</a>
+          <a href="#!" class="text-white">Oppo</a>
         </p>
         <p className="mb-4">
-          <a href="#!" className="text-white">Vue</a>
+          <a href="#!" className="text-white">Sumsung</a>
         </p>
         <p>
-          <a href="#!" className="text-white">Laravel</a>
+          <a href="#!" className="text-white">Poco x3</a>
         </p>
       </div>
        {/* contact section  */}

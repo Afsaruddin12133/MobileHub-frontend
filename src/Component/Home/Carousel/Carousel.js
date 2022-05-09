@@ -1,8 +1,8 @@
 import React from 'react';
-import carouselone from '../../photo/carosul/pexels-adrienn-1458283.jpg';
-import carouseltwo from '../../photo/carosul/pexels-lisa-fotios-1092644.jpg';
+import carouseltwo from '../../photo/carosul/pexels-adrienn-1458283.jpg';
+import carouselone from '../../photo/carosul/pexels-lisa-fotios-1092644.jpg';
 import carouselthree from '../../photo/carosul/pexels-photomix-company-887751.jpg';
-
+ 
 const Carousel = () => {
     return (
         <div
